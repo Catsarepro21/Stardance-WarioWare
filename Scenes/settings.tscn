@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://di8j24ndokpye"]
+
+[ext_resource type="Texture2D" uid="uid://btjwcpkwsbeqm" path="res://tan_screen_1920x1080.png" id="1_4geyq"]
+[ext_resource type="Texture2D" uid="uid://b3qyfl25wtqtr" path="res://pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png" id="2_i44u3"]
+
+[node name="Settings" type="Node2D" unique_id=1919006093]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=407937200]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.5993152, 0.59862137)
+texture = ExtResource("1_4geyq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1142077134]
+offset_left = 328.0
+offset_top = 2.0
+offset_right = 809.0
+offset_bottom = 180.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/paragraph_separation = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 100
+text = "SETTINGS"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=937075064]
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1151.0
+offset_bottom = 206.0
+
+[node name="PixelArtGearWithWrench8BitStyleWhiteBackground3604881508RemovebgPreview2" type="Sprite2D" parent="HBoxContainer" unique_id=911998654]
+position = Vector2(981, 75)
+scale = Vector2(0.29115224, 0.270428)
+texture = ExtResource("2_i44u3")
+
+[node name="PixelArtGearWithWrench8BitStyleWhiteBackground3604881508RemovebgPreview3" type="Sprite2D" parent="HBoxContainer" unique_id=1986575116]
+position = Vector2(152, 69)
+scale = Vector2(0.29115224, 0.270428)
+texture = ExtResource("2_i44u3")
