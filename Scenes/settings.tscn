@@ -1,12 +1,22 @@
 [gd_scene format=3 uid="uid://di8j24ndokpye"]
 
 [ext_resource type="Texture2D" uid="uid://btjwcpkwsbeqm" path="res://tan_screen_1920x1080.png" id="1_4geyq"]
+[ext_resource type="Script" uid="uid://7jc8rnv1exu0" path="res://Scenes/settings.gd" id="1_lhmql"]
 [ext_resource type="Texture2D" uid="uid://b3qyfl25wtqtr" path="res://pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png" id="2_i44u3"]
+[ext_resource type="Script" uid="uid://w14s2qfjfx34" path="res://Scenes/rebind_button.gd" id="4_aaqfp"]
+[ext_resource type="Script" uid="uid://dypocs5w3u4ov" path="res://Scenes/rebind_button2.gd" id="5_j2dne"]
+[ext_resource type="Script" uid="uid://8sjdtkbm012p" path="res://Scenes/rebind_button3.gd" id="6_6kysc"]
+[ext_resource type="Script" uid="uid://7xtrklgbaryc" path="res://Scenes/rebind_button4.gd" id="7_6vr2p"]
+[ext_resource type="Script" uid="uid://8p57uxjhm334" path="res://Scenes/rebind_button5.gd" id="8_f60ng"]
+[ext_resource type="Texture2D" uid="uid://ye0ndldjrd3h" path="res://OIP-removebg-preview.png" id="9_bismi"]
 
 [node name="Settings" type="Node2D" unique_id=1919006093]
+position = Vector2(0, 1)
+script = ExtResource("1_lhmql")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=407937200]
-offset_right = 1920.0
+offset_left = 1.999999
+offset_right = 1922.0
 offset_bottom = 1080.0
 scale = Vector2(0.5993152, 0.59862137)
 texture = ExtResource("1_4geyq")
@@ -39,3 +49,208 @@ texture = ExtResource("2_i44u3")
 position = Vector2(152, 69)
 scale = Vector2(0.29115224, 0.270428)
 texture = ExtResource("2_i44u3")
+
+[node name="Music_Slider" type="HSlider" parent="." unique_id=350563909]
+unique_name_in_owner = true
+offset_left = 362.0
+offset_top = 206.0
+offset_right = 1113.0
+offset_bottom = 266.0
+value = 50.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=502794573]
+offset_left = -1.0
+offset_top = 199.0
+offset_right = 349.0
+offset_bottom = 270.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 50
+text = "Music Volume"
+
+[node name="SFX_Slider" type="HSlider" parent="." unique_id=1821955261]
+unique_name_in_owner = true
+offset_left = 365.0
+offset_top = 291.0
+offset_right = 1116.0
+offset_bottom = 351.0
+value = 50.0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1628711867]
+offset_left = 2.0
+offset_top = 284.0
+offset_right = 352.0
+offset_bottom = 355.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 50
+text = "SFX Volume"
+
+[node name="FullScreen Checkbox" type="CheckBox" parent="." unique_id=319581297]
+unique_name_in_owner = true
+offset_left = 306.00003
+offset_top = 570.0
+offset_right = 330.00003
+offset_bottom = 595.7143
+scale = Vector2(3, 3)
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="." unique_id=923267316]
+offset_left = 8.0
+offset_top = 372.0
+offset_right = 358.0
+offset_bottom = 443.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 50
+text = "Key Binding"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="." unique_id=1582495718]
+offset_left = 4.0
+offset_top = 568.0
+offset_right = 273.0
+offset_bottom = 639.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 50
+text = "Fullscreen"
+
+[node name="Remap Buttons" type="Control" parent="." unique_id=1155205592]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -24.0
+offset_top = 4.0
+offset_right = 16.0
+offset_bottom = 44.0
+
+[node name="Remapping Container" type="HBoxContainer" parent="Remap Buttons" unique_id=500427167]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 351.0
+offset_right = 830.0
+offset_bottom = 444.0
+
+[node name="RebindButton" type="Button" parent="Remap Buttons/Remapping Container" unique_id=775293231]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+script = ExtResource("4_aaqfp")
+
+[node name="Remapping Container2" type="HBoxContainer" parent="Remap Buttons" unique_id=1729169398]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 464.0
+offset_right = 729.0
+offset_bottom = 557.0
+
+[node name="RebindButton" type="Button" parent="Remap Buttons/Remapping Container2" unique_id=1020130546]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+script = ExtResource("5_j2dne")
+
+[node name="Remapping Container3" type="HBoxContainer" parent="Remap Buttons" unique_id=170791878]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 353.0
+offset_right = 670.0
+offset_bottom = 446.0
+
+[node name="RebindButton" type="Button" parent="Remap Buttons/Remapping Container3" unique_id=1599139829]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+script = ExtResource("6_6kysc")
+
+[node name="Remapping Container4" type="HBoxContainer" parent="Remap Buttons" unique_id=1754442487]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 353.0
+offset_right = 1001.0
+offset_bottom = 446.0
+
+[node name="RebindButton" type="Button" parent="Remap Buttons/Remapping Container4" unique_id=267987869]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+script = ExtResource("7_6vr2p")
+
+[node name="Remapping Container5" type="HBoxContainer" parent="Remap Buttons" unique_id=762277044]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 462.0
+offset_right = 930.0
+offset_bottom = 555.0
+
+[node name="RebindButton" type="Button" parent="Remap Buttons/Remapping Container5" unique_id=1671871514]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+script = ExtResource("8_f60ng")
+
+[node name="Control" type="Control" parent="Remap Buttons" unique_id=188936969]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Movement Lables" type="Control" parent="." unique_id=707061663]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -22.0
+offset_top = -85.0
+offset_right = 18.0
+offset_bottom = -45.0
+
+[node name="Jump Label" type="Label" parent="Movement Lables" unique_id=1940138103]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 443.0
+offset_right = 579.0
+offset_bottom = 466.0
+text = "Jump"
+
+[node name="Move Right Label" type="Label" parent="Movement Lables" unique_id=1260824149]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 553.0
+offset_right = 689.0
+offset_bottom = 576.0
+text = "Move Right"
+
+[node name="Move Left Label" type="Label" parent="Movement Lables" unique_id=1388154396]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 441.0
+offset_right = 783.0
+offset_bottom = 464.0
+text = "Move Left"
+
+[node name="Duck Label" type="Label" parent="Movement Lables" unique_id=1912970629]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 440.0
+offset_right = 937.0
+offset_bottom = 463.0
+text = "Duck"
+
+[node name="Ability Label" type="Label" parent="Movement Lables" unique_id=994253729]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 553.0
+offset_right = 872.0
+offset_bottom = 576.0
+text = "Ability"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=587683190]
+offset_left = 1066.0
+offset_top = 560.0
+offset_right = 1158.0
+offset_bottom = 647.0
+
+[node name="OipRemovebgPreview" type="Sprite2D" parent="TextureButton" unique_id=328768026]
+position = Vector2(41.5, 41.5)
+scale = Vector2(0.18600002, 0.2340001)
+texture = ExtResource("9_bismi")
+
+[connection signal="value_changed" from="Music_Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SFX_Slider" to="." method="_on_SFX_slider_value_changed"]
+[connection signal="toggled" from="FullScreen Checkbox" to="." method="_on_full_screen_checkbox_toggled"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

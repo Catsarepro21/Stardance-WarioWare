@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://y6yanh5cgr1y"]
+
+[ext_resource type="Script" uid="uid://fdalj1tlysn" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="Texture2D" uid="uid://chrtmm6rvbnqi" path="res://Heart_Full.PNG" id="2_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://mqx83q0lasca" path="res://image-removebg-preview (1).png" id="2_64ctp"]
+
+[node name="HUD" type="Node2D" unique_id=1310349274]
+script = ExtResource("1_37p78")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1621898026]
+
+[node name="LivesContainer" type="HBoxContainer" parent="HUD" unique_id=212665368]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 244.0
+offset_bottom = 81.0
+
+[node name="Heart1" type="TextureRect" parent="HUD/LivesContainer" unique_id=744071961]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_8sq4i")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="HUD/LivesContainer" unique_id=1635852094]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_8sq4i")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="HUD/LivesContainer" unique_id=1994422279]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_8sq4i")
+expand_mode = 2
+
+[node name="CoinsContainer" type="HBoxContainer" parent="HUD" unique_id=1507701178]
+unique_name_in_owner = true
+offset_left = -7.0
+offset_top = 74.0
+offset_right = 251.0
+offset_bottom = 208.0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/CoinsContainer" unique_id=237864304]
+layout_mode = 2
+texture = ExtResource("2_64ctp")
+
+[node name="Coins Label" type="Label" parent="HUD/CoinsContainer" unique_id=1329465746]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+
+[node name="TimerLabel" type="Label" parent="HUD" unique_id=913585278]
+unique_name_in_owner = true
+offset_left = 1047.0
+offset_right = 1157.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 37
+text = "00:00"
+
+[node name="LevelLabel" type="Label" parent="HUD" unique_id=533567447]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.377
+anchor_top = 0.24400002
+anchor_right = 0.377
+anchor_bottom = 0.24400002
+offset_left = 656.696
+offset_top = -117.112015
+offset_right = 710.696
+offset_bottom = -94.112015
+text = "Level 1"

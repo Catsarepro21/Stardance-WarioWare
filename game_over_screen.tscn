@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://nx6mdg3es6of"]
+
+[ext_resource type="Script" uid="uid://cjjqtp8e5ep45" path="res://game_over_screen.gd" id="1_gt22q"]
+
+[node name="Game_Over_Screen" type="Node2D" unique_id=465306001]
+process_mode = 3
+script = ExtResource("1_gt22q")
+
+[node name="Death_Screen" type="CanvasLayer" parent="." unique_id=724498525]
+process_mode = 3
+layer = 3
+
+[node name="ColorRect" type="ColorRect" parent="Death_Screen" unique_id=774372275]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5019608, 0, 0, 0.7294118)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Death_Screen" unique_id=1148539090]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -115.5
+offset_right = 180.0
+offset_bottom = 115.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Death_Screen/VBoxContainer" unique_id=153627846]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "You Died :("
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="Death_Screen/VBoxContainer" unique_id=1081187909]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Retry Current Level"
+
+[node name="TitleScreenButton" type="Button" parent="Death_Screen/VBoxContainer" unique_id=13157036]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Quit to Title Screen (You will lose all progress)"
+
+[node name="QuitButton" type="Button" parent="Death_Screen/VBoxContainer" unique_id=2046471618]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "Quit Game"
+
+[connection signal="pressed" from="Death_Screen/VBoxContainer/RetryButton" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Death_Screen/VBoxContainer/TitleScreenButton" to="." method="_on_return_to_title_screen_pressed"]
+[connection signal="pressed" from="Death_Screen/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]
