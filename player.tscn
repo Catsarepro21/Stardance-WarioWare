@@ -158,8 +158,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_435oi"]
-radius = 41.19466
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thloh"]
+size = Vector2(51, 65)
 
 [node name="Player" type="CharacterBody2D" unique_id=124454505 groups=["Player"]]
 position = Vector2(45, 41)
@@ -176,5 +176,5 @@ autoplay = "IDLE"
 frame_progress = 0.5418731
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2066314946]
-position = Vector2(-2, -6)
-shape = SubResource("CircleShape2D_435oi")
+position = Vector2(-2.5, -1.5)
+shape = SubResource("RectangleShape2D_thloh")

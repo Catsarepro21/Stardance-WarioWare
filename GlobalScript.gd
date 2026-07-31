@@ -2,6 +2,7 @@ extends Node
 
 # Vars
 var lives = 3
+var session_time = 0.00
 var coins = 0
 var music_volume = 50
 var sfx_volume = 50 
