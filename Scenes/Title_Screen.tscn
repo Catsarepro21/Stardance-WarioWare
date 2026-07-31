@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cni484j1m73sx"]
 
 [ext_resource type="Script" uid="uid://ch1pmaniaondl" path="res://Scenes/title_screen.gd" id="1_7q6gp"]
-[ext_resource type="Texture2D" uid="uid://wavsml0cnju8" path="res://pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp" id="1_67rak"]
+[ext_resource type="Texture2D" uid="uid://wavsml0cnju8" path="res://Assets/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp" id="1_67rak"]
 
 [node name="Title Screen" type="Node2D" unique_id=1130180296]
+scale = Vector2(1.6709709, 1.6670115)
 script = ExtResource("1_7q6gp")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1396835752]

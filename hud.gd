@@ -1,9 +1,7 @@
 extends Node2D
 
-var heart_full: Texture2D = preload("res://Heart_Full.PNG")
-var heart_empty: Texture2D = preload("res://Heart_Empty.png")
-func _ready() -> void:
-	$"%LevelLabel".text = "Level 1"
+var heart_full: Texture2D = preload("res://Assets/Heart_Full.PNG")
+var heart_empty: Texture2D = preload("res://Assets/Heart_Empty.png")
 	
 func _process(_delta: float) -> void:
 	$"%TimerLabel".text = GlobalScript.get_formatted_time()

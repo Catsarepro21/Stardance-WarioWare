@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chrtmm6rvbnqi"
-path="res://.godot/imported/Heart_Full.PNG-bb8e89944885935fa2c109f0e20afcec.ctex"
+uid="uid://dp5bosvypv4d0"
+path="res://.godot/imported/spritesheet-tiles-default.png-026726331fe4f383b76766b2f120b05c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Heart_Full.PNG"
-dest_files=["res://.godot/imported/Heart_Full.PNG-bb8e89944885935fa2c109f0e20afcec.ctex"]
+source_file="res://Assets/spritesheet-tiles-default.png"
+dest_files=["res://.godot/imported/spritesheet-tiles-default.png-026726331fe4f383b76766b2f120b05c.ctex"]
 
 [params]
 

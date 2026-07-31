@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btjwcpkwsbeqm"
-path="res://.godot/imported/tan_screen_1920x1080.png-32c07be649db985c6f6939b9833f3f51.ctex"
+uid="uid://ye0ndldjrd3h"
+path="res://.godot/imported/OIP-removebg-preview.png-641d683ec1aed63c69446feefeb4746b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tan_screen_1920x1080.png"
-dest_files=["res://.godot/imported/tan_screen_1920x1080.png-32c07be649db985c6f6939b9833f3f51.ctex"]
+source_file="res://Assets/OIP-removebg-preview.png"
+dest_files=["res://.godot/imported/OIP-removebg-preview.png-641d683ec1aed63c69446feefeb4746b.ctex"]
 
 [params]
 

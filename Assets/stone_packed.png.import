@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mqx83q0lasca"
-path="res://.godot/imported/image-removebg-preview (1).png-647283c848a3a819ee2ea5621a55b767.ctex"
+uid="uid://beplptxilw10h"
+path="res://.godot/imported/stone_packed.png-23611e990e2b9725c936e458d16dd237.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://image-removebg-preview (1).png"
-dest_files=["res://.godot/imported/image-removebg-preview (1).png-647283c848a3a819ee2ea5621a55b767.ctex"]
+source_file="res://Assets/stone_packed.png"
+dest_files=["res://.godot/imported/stone_packed.png-23611e990e2b9725c936e458d16dd237.ctex"]
 
 [params]
 

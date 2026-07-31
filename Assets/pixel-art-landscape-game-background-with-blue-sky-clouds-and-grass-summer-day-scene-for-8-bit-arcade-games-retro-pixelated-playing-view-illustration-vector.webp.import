@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3qyfl25wtqtr"
-path="res://.godot/imported/pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png-37daf0c8d23dc5e856aae5e45aa13b21.ctex"
+uid="uid://wavsml0cnju8"
+path="res://.godot/imported/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp-56d79664a7a6413975b7b86a295546f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png"
-dest_files=["res://.godot/imported/pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png-37daf0c8d23dc5e856aae5e45aa13b21.ctex"]
+source_file="res://Assets/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp"
+dest_files=["res://.godot/imported/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp-56d79664a7a6413975b7b86a295546f5.ctex"]
 
 [params]
 

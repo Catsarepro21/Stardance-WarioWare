@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://di8j24ndokpye"]
 
-[ext_resource type="Texture2D" uid="uid://btjwcpkwsbeqm" path="res://tan_screen_1920x1080.png" id="1_4geyq"]
+[ext_resource type="Texture2D" uid="uid://btjwcpkwsbeqm" path="res://Assets/tan_screen_1920x1080.png" id="1_4geyq"]
 [ext_resource type="Script" uid="uid://7jc8rnv1exu0" path="res://Scenes/settings.gd" id="1_lhmql"]
-[ext_resource type="Texture2D" uid="uid://b3qyfl25wtqtr" path="res://pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png" id="2_i44u3"]
+[ext_resource type="Texture2D" uid="uid://b3qyfl25wtqtr" path="res://Assets/pixel-art-gear-with-wrench-8bit-style-white-background_360488-1508-removebg-preview.png" id="2_i44u3"]
 [ext_resource type="Script" uid="uid://w14s2qfjfx34" path="res://Scenes/rebind_button.gd" id="4_aaqfp"]
 [ext_resource type="Script" uid="uid://dypocs5w3u4ov" path="res://Scenes/rebind_button2.gd" id="5_j2dne"]
 [ext_resource type="Script" uid="uid://8sjdtkbm012p" path="res://Scenes/rebind_button3.gd" id="6_6kysc"]
 [ext_resource type="Script" uid="uid://7xtrklgbaryc" path="res://Scenes/rebind_button4.gd" id="7_6vr2p"]
 [ext_resource type="Script" uid="uid://8p57uxjhm334" path="res://Scenes/rebind_button5.gd" id="8_f60ng"]
-[ext_resource type="Texture2D" uid="uid://ye0ndldjrd3h" path="res://OIP-removebg-preview.png" id="9_bismi"]
+[ext_resource type="Texture2D" uid="uid://ye0ndldjrd3h" path="res://Assets/OIP-removebg-preview.png" id="9_bismi"]
 
 [node name="Settings" type="Node2D" unique_id=1919006093]
 position = Vector2(0, 1)
+scale = Vector2(1.6640347, 1.6736355)
 script = ExtResource("1_lhmql")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=407937200]
