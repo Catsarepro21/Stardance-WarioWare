@@ -14,7 +14,7 @@ distance = -466.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4i5w4"]
 normal = Vector2(1, 0)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ybum"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mdr7d"]
 texture = ExtResource("1_2d5gf")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
@@ -182,7 +182,7 @@ texture_region_size = Vector2i(18, 18)
 
 [sub_resource type="TileSet" id="TileSet_435oi"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_7ybum")
+sources/0 = SubResource("TileSetAtlasSource_mdr7d")
 
 [node name="Level Screen1" type="Node2D" unique_id=274584601]
 

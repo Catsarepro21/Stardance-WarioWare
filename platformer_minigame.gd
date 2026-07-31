@@ -11,6 +11,6 @@ func _process(delta: float) -> void:
 func _on_minigame_timeout() -> void:
 	%"Level Label".text = "TIME UP"
 	GlobalScript.game_running = false
-	get_tree().paused
-	await get_tree().create_timer(3.0, true, false, true).timeout
+	get_tree().paused = true
+	await get_tree().create_timer(1.0, true, false, true).timeout
 	get_tree().change_scene_to_file("res://Scenes/level_screen.tscn")

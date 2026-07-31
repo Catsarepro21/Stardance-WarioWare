@@ -22,7 +22,6 @@ func _on_body_exited(body:Node2D) -> void:
 
 func enter_portal() -> void:
 	if minigame_scene:
-		get_tree().paused = true
 		get_tree().change_scene_to_file("res://platformer_minigame.tscn")
 	else:
 		print("Assign Game to Portal")
