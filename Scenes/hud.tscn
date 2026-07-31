@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://y6yanh5cgr1y"]
+
+[ext_resource type="Script" uid="uid://fdalj1tlysn" path="res://Scripts/hud.gd" id="1_37p78"]
+[ext_resource type="Texture2D" uid="uid://chrtmm6rvbnqi" path="res://Assets/Heart_Full.PNG" id="2_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://mqx83q0lasca" path="res://Assets/image-removebg-preview (1).png" id="2_64ctp"]
+
+[node name="HUD" type="Node2D" unique_id=1310349274]
+script = ExtResource("1_37p78")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1621898026]
+
+[node name="LivesContainer" type="HBoxContainer" parent="HUD" unique_id=212665368]
+unique_name_in_owner = true
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 244.0
+offset_bottom = 81.0
+
+[node name="Heart1" type="TextureRect" parent="HUD/LivesContainer" unique_id=744071961]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_8sq4i")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="HUD/LivesContainer" unique_id=1635852094]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_8sq4i")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="HUD/LivesContainer" unique_id=1994422279]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_8sq4i")
+expand_mode = 2
+
+[node name="CoinsContainer" type="HBoxContainer" parent="HUD" unique_id=1507701178]
+unique_name_in_owner = true
+offset_left = -7.0
+offset_top = 74.0
+offset_right = 251.0
+offset_bottom = 208.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="HUD/CoinsContainer" unique_id=237864304]
+layout_mode = 2
+texture = ExtResource("2_64ctp")
+
+[node name="Coins Label" type="Label" parent="HUD/CoinsContainer" unique_id=1329465746]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 25
+text = "0"
+
+[node name="TimerLabel" type="Label" parent="HUD" unique_id=913585278]
+unique_name_in_owner = true
+offset_left = 1820.0
+offset_top = -10.0
+offset_right = 1930.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 37
+text = "00:00"
