@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://bbaw2gj6yi50w"]
 
 [ext_resource type="Script" uid="uid://cdg5vth20teu3" path="res://platformer_minigame.gd" id="1_2atxb"]
-[ext_resource type="Texture2D" uid="uid://cl7hspwnhyr0e" path="res://Assets/image-removebg-preview.png" id="1_h18xt"]
 [ext_resource type="PackedScene" uid="uid://bjso6j1qhi7ua" path="res://player.tscn" id="3_thloh"]
 [ext_resource type="PackedScene" uid="uid://y6yanh5cgr1y" path="res://hud.tscn" id="4_fbkuf"]
 [ext_resource type="PackedScene" uid="uid://b7qluaw5ov6sf" path="res://coin.tscn" id="4_hhhoe"]
 [ext_resource type="Texture2D" uid="uid://beplptxilw10h" path="res://Assets/stone_packed.png" id="5_thloh"]
+[ext_resource type="PackedScene" uid="uid://sqwy8xjag7kf" path="res://exit_flag.tscn" id="7_gnqgn"]
 [ext_resource type="PackedScene" uid="uid://dgqk3uk30gc0n" path="res://killzone.tscn" id="7_hhhoe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbkuf"]
@@ -194,10 +194,6 @@ horizontal_alignment = 1
 [node name="HUD" parent="." unique_id=1310349274 instance=ExtResource("4_fbkuf")]
 visible = false
 
-[node name="ImageRemovebgPreview" type="Sprite2D" parent="." unique_id=354059478]
-position = Vector2(189, 355)
-texture = ExtResource("1_h18xt")
-
 [node name="Coin" parent="." unique_id=1604147098 instance=ExtResource("4_hhhoe")]
 position = Vector2(1528, 755)
 
@@ -232,5 +228,8 @@ tile_set = SubResource("TileSet_hhhoe")
 
 [node name="Killzone" parent="." unique_id=1889393853 instance=ExtResource("7_hhhoe")]
 position = Vector2(11, 1090)
+
+[node name="exit_flag" parent="." unique_id=1789535812 instance=ExtResource("7_gnqgn")]
+position = Vector2(202, 360)
 
 [connection signal="timeout" from="Timer" to="." method="_on_minigame_timeout"]

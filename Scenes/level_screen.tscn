@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://beplptxilw10h" path="res://Assets/stone_packed.png" id="1_2d5gf"]
 [ext_resource type="Texture2D" uid="uid://wavsml0cnju8" path="res://Assets/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp" id="1_d40uv"]
+[ext_resource type="Script" uid="uid://y7nifpgdg03g" path="res://Scenes/level_screen.gd" id="1_taw6s"]
 [ext_resource type="PackedScene" uid="uid://y6yanh5cgr1y" path="res://hud.tscn" id="2_6yjli"]
 [ext_resource type="PackedScene" uid="uid://bjso6j1qhi7ua" path="res://player.tscn" id="3_glb20"]
 [ext_resource type="PackedScene" uid="uid://bbaw2gj6yi50w" path="res://platformer_minigame.tscn" id="4_mdr7d"]
@@ -185,6 +186,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_mdr7d")
 
 [node name="Level Screen1" type="Node2D" unique_id=274584601]
+script = ExtResource("1_taw6s")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1060907328]
 scroll_scale = Vector2(0.5, 0.5)

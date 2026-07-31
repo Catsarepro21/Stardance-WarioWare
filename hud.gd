@@ -5,8 +5,15 @@ var heart_empty: Texture2D = preload("res://Assets/Heart_Empty.png")
 	
 	
 func _ready() -> void:
-	update_coins_display()
+	print("--- LEVEL SCREEN LOADED ---")
+	print("GlobalScript.coins at load time: ", GlobalScript.coins)
 	
+	# Force reference check directly
+	var coin_node = find_child("Coins Label", true, false)
+	
+	if coin_node:
+		coin_node.text = str(GlobalScript.coins)
+
 func _process(_delta: float) -> void:
 	$"%TimerLabel".text = GlobalScript.get_formatted_time()
 	update_hearts()

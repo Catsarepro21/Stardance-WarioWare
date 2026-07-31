@@ -6,4 +6,4 @@ func _on_body_entered(body: Node2D) -> void:
 		var timer_node = get_tree().current_scene.get_node_or_null("Timer")
 		if timer_node:
 			GlobalScript.session_time = timer_node.time_left
-		get_tree().reload_current_scene()
+			get_tree().call_deferred("reload_current_scene")	

@@ -51,6 +51,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 25
+text = "0"
 
 [node name="TimerLabel" type="Label" parent="HUD" unique_id=913585278]
 unique_name_in_owner = true

@@ -25,8 +25,13 @@ func trigger_game_over() -> void:
 	get_tree().paused = true
 	
 	var death_screen = preload("res://game_over_screen.tscn").instantiate()
-	get_tree().current_scene.add_child(death_screen)
-
+	
+	if death_screen is CanvasLayer:
+		death_screen.layer = 100
+		
+	death_screen.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	get_tree().root.add_child(death_screen)
 func get_formatted_time() -> String:
 	var minutes: int = int(time_elapsed) / 60
 	var seconds: int = int(time_elapsed) % 60
