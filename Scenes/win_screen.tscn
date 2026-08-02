@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://daawinscreen"]
+
+[ext_resource type="Script" uid="uid://dwin_screen_script" path="res://Scripts/win_screen.gd" id="1_win"]
+[ext_resource type="Texture2D" uid="uid://wavsml0cnju8" path="res://Assets/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp" id="2_bg"]
+
+[node name="WinScreen" type="Node2D" unique_id=981273981]
+scale = Vector2(1.67, 1.67)
+script = ExtResource("1_win")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1396835752]
+offset_right = 1150.0
+offset_bottom = 650.0
+texture = ExtResource("2_bg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=182736152]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1948642394]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeaderLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1347527198]
+layout_mode = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 60
+text = "YOU WIN!"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=981237612]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 36
+text = "FINAL TIME: 00:00"
+horizontal_alignment = 1
+
+[node name="CoinsLabel" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=871236123]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 36
+text = "COINS COLLECTED: 0"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer" unique_id=1928371]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="PlayAgainButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1560531705]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "PLAY AGAIN"
+
+[node name="TitleButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1167136608]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "TITLE SCREEN"
+
+[node name="QuitButton" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=1348020088]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 32
+text = "QUIT GAME"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/TitleButton" to="." method="_on_title_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

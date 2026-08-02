@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://6rutscc5cqp3" path="res://Assets/Screenshot 2026-07-31 113406.png" id="1_4hdyq"]
 [ext_resource type="Script" uid="uid://cpu6irpyjru5c" path="res://Scripts/portal.gd" id="1_aamt4"]
 [ext_resource type="Shader" uid="uid://b22efj8tixwgy" path="res://Assets/Shader.gdshader" id="1_bagdj"]
+[ext_resource type="Texture2D" uid="uid://mqx83q0lasca" path="res://Assets/image-removebg-preview (1).png" id="4_rf6x2"]
+[ext_resource type="Texture2D" uid="uid://cl7hspwnhyr0e" path="res://Assets/image-removebg-preview.png" id="5_av48w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t5hry"]
 shader = ExtResource("1_bagdj")
@@ -77,6 +79,20 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1342315298]
 position = Vector2(2, 1)
 shape = SubResource("CircleShape2D_435oi")
+
+[node name="CoinCollected" type="Sprite2D" parent="." unique_id=1893149570]
+unique_name_in_owner = true
+visible = false
+position = Vector2(4.7683716e-07, -186)
+scale = Vector2(0.684466, 0.6567164)
+texture = ExtResource("4_rf6x2")
+
+[node name="LevelCompleted" type="Sprite2D" parent="." unique_id=278076825]
+unique_name_in_owner = true
+visible = false
+position = Vector2(20, -100.00001)
+scale = Vector2(0.6229508, 0.60625)
+texture = ExtResource("5_av48w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

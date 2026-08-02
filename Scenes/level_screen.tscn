@@ -5,8 +5,32 @@
 [ext_resource type="Script" uid="uid://y7nifpgdg03g" path="res://Scripts/level_screen.gd" id="1_taw6s"]
 [ext_resource type="PackedScene" uid="uid://y6yanh5cgr1y" path="res://Scenes/hud.tscn" id="2_6yjli"]
 [ext_resource type="PackedScene" uid="uid://bjso6j1qhi7ua" path="res://Scenes/player.tscn" id="3_glb20"]
-[ext_resource type="PackedScene" uid="uid://bbaw2gj6yi50w" path="res://Scenes/platformer_minigame.tscn" id="4_mdr7d"]
 [ext_resource type="PackedScene" uid="uid://cdcgaj66a4ic7" path="res://Scenes/Portal.tscn" id="5_7ybum"]
+[ext_resource type="PackedScene" uid="uid://bbaw2gj6yi50w" path="res://Scenes/platformer_minigame.tscn" id="5_taw6s"]
+[ext_resource type="Script" uid="uid://did21ab1ws43c" path="res://Scripts/spawner.gd" id="7_pandp"]
+[ext_resource type="PackedScene" uid="uid://5cih5sw3cjc6" path="res://Scenes/falling_object.tscn" id="8_0yp81"]
+[ext_resource type="PackedScene" uid="uid://b7qluaw5ov6sf" path="res://Scenes/coin.tscn" id="9_ltyyj"]
+[ext_resource type="PackedScene" uid="uid://vhl5eov58q2y" path="res://Scenes/dropper_minigame.tscn" id="6_dropper"]
+[ext_resource type="PackedScene" uid="uid://c89winscreen" path="res://Scenes/win_screen.tscn" id="7_win"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sd74c"]
+normal = Vector2(0.018983921, -0.9998198)
+distance = -466.0
+
+[sub_resource type="PackedScene" id="PackedScene_mb8ju"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("dropper_minigame", "Node2D", "ColorRect", "offset_right", "offset_bottom", "texture", "TextureRect", "HUD", "position", "Ground", "StaticBody2D", "CollisionShape2D", "shape", "Player", "Spawner", "script", "block_scene", "coin_scene", "drop_time_seconds", "Marker2D", "Level Label", "unique_name_in_owner", "anchors_preset", "anchor_top", "anchor_bottom", "offset_left", "offset_top", "grow_vertical", "theme_override_constants/outline_size", "theme_override_font_sizes/font_size", "text", "horizontal_alignment", "Label"),
+"node_count": 9,
+"node_ids": PackedInt32Array(1552668073, 1120482058, 1310349274, 828185505, 1316262352, 124454505, 1402844982, 1519773559, 1239416397),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 0, 0, 6, 2, -1, 3, 3, 0, 4, 1, 5, 2, 0, 0, 0, 2147483647, 7, 3, 1, 8, 4, 0, 0, 0, 10, 9, -1, 1, 8, 5, 0, 3, 0, 11, 11, -1, 2, 8, 6, 12, 7, 0, 0, 0, 2147483647, 13, 8, 1, 8, 4, 0, 0, 0, 1, 14, -1, 4, 15, 9, 16, 10, 17, 11, 18, 12, 0, 6, 0, 19, 19, -1, 1, 8, 13, 0, 0, 0, 32, 20, -1, 13, 21, 14, 22, 15, 23, 16, 24, 16, 25, 17, 26, 12, 3, 18, 4, 19, 27, 20, 28, 21, 29, 22, 30, 23, 31, 24, 0),
+"variants": [1936.0, 1088.0, ExtResource("1_d40uv"), ExtResource("2_6yjli"), Vector2(900, 778), Vector2(126, 802), Vector2(10, -469), SubResource("WorldBoundaryShape2D_sd74c"), ExtResource("3_glb20"), ExtResource("7_pandp"), ExtResource("8_0yp81"), ExtResource("9_ltyyj"), 1.0, Vector2(1313, 35), true, 4, 0.5, 754.0, 1140.0, 70.0, 2, 20, 50, "SURVIVE", 1],
+"version": 3
+}
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_435oi"]
 normal = Vector2(0.018983921, -0.9998198)
@@ -201,7 +225,19 @@ texture = ExtResource("1_d40uv")
 
 [node name="PlatformerPortal" parent="." unique_id=1934030575 instance=ExtResource("5_7ybum")]
 position = Vector2(577, 742)
-minigame_scene = ExtResource("4_mdr7d")
+minigame_scene = ExtResource("5_taw6s")
+
+[node name="DropperPortal" parent="." unique_id=49243711 instance=ExtResource("5_7ybum")]
+position = Vector2(1076, 742)
+minigame_scene = ExtResource("6_dropper")
+level_id = "Dropper_Minigame"
+
+[node name="FinalPortal" parent="." unique_id=77192837 instance=ExtResource("5_7ybum")]
+position = Vector2(1575, 742)
+minigame_scene = ExtResource("7_win")
+level_id = "Final_Win"
+required_coins = 2
+requires_both_completed = true
 
 [node name="Player" parent="." unique_id=124454505 instance=ExtResource("3_glb20")]
 position = Vector2(91, 766)

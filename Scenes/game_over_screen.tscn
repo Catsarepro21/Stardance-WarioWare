@@ -48,7 +48,7 @@ text = "Retry Current Level"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-text = "Quit to Title Screen (You will lose all progress)"
+text = "Quit to Title Screen"
 
 [node name="QuitButton" type="Button" parent="Death_Screen/VBoxContainer" unique_id=2046471618]
 unique_name_in_owner = true

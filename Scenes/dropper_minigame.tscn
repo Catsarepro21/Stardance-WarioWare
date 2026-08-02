@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://vhl5eov58q2y"]
+
+[ext_resource type="Script" uid="uid://dhlk2u8p6aini" path="res://Scripts/dropper_minigame.gd" id="1_k2e0b"]
+[ext_resource type="Texture2D" uid="uid://wavsml0cnju8" path="res://Assets/pixel-art-landscape-game-background-with-blue-sky-clouds-and-grass-summer-day-scene-for-8-bit-arcade-games-retro-pixelated-playing-view-illustration-vector.webp" id="1_ntdbh"]
+[ext_resource type="PackedScene" uid="uid://bjso6j1qhi7ua" path="res://Scenes/player.tscn" id="2_qgnqn"]
+[ext_resource type="PackedScene" uid="uid://y6yanh5cgr1y" path="res://Scenes/hud.tscn" id="2_sd74c"]
+[ext_resource type="Script" uid="uid://did21ab1ws43c" path="res://Scripts/spawner.gd" id="4_hvp15"]
+[ext_resource type="PackedScene" uid="uid://5cih5sw3cjc6" path="res://Scenes/falling_object.tscn" id="5_o4xjx"]
+[ext_resource type="PackedScene" uid="uid://b7qluaw5ov6sf" path="res://Scenes/coin.tscn" id="6_gfv8y"]
+[ext_resource type="PackedScene" uid="uid://sqwy8xjag7kf" path="res://Scenes/exit_flag.tscn" id="8_ko3u0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sd74c"]
+normal = Vector2(0.018983921, -0.9998198)
+distance = -466.0
+
+[node name="dropper_minigame" type="Node2D" unique_id=1552668073 node_paths=PackedStringArray("timer_node", "timer_label", "level_label", "exit_flag")]
+script = ExtResource("1_k2e0b")
+timer_node = NodePath("Timer")
+timer_label = NodePath("CanvasLayer/TimerLabel")
+level_label = NodePath("Level Label")
+exit_flag = NodePath("exit_flag")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1120482058]
+offset_right = 1936.0
+offset_bottom = 1088.0
+texture = ExtResource("1_ntdbh")
+
+[node name="HUD" parent="." unique_id=1310349274 instance=ExtResource("2_sd74c")]
+position = Vector2(900, 778)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=828185505 groups=["Ground"]]
+position = Vector2(126, 802)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1316262352]
+position = Vector2(10, -469)
+shape = SubResource("WorldBoundaryShape2D_sd74c")
+
+[node name="Player" parent="." unique_id=124454505 instance=ExtResource("2_qgnqn")]
+position = Vector2(900, 778)
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1402844982]
+script = ExtResource("4_hvp15")
+block_scene = ExtResource("5_o4xjx")
+coin_scene = ExtResource("6_gfv8y")
+drop_time_seconds = 1.0
+
+[node name="Marker2D" type="Marker2D" parent="Spawner" unique_id=1519773559]
+position = Vector2(1313, 35)
+
+[node name="Level Label" type="Label" parent="." unique_id=1239416397]
+unique_name_in_owner = true
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 754.0
+offset_top = 1.0
+offset_right = 1140.0
+offset_bottom = 70.0
+grow_vertical = 2
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "SURVIVE"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=278972691]
+unique_name_in_owner = true
+wait_time = 30.0
+one_shot = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=423790623]
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1499120392]
+unique_name_in_owner = true
+offset_left = 843.0
+offset_top = 68.0
+offset_right = 1063.0
+offset_bottom = 118.0
+text = "30:00"
+horizontal_alignment = 1
+
+[node name="exit_flag" parent="." unique_id=1789535812 instance=ExtResource("8_ko3u0")]
+unique_name_in_owner = true
+visible = false
+position = Vector2(1700, 758)

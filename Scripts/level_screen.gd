@@ -1,9 +1,12 @@
 extends Node2D
 
+func _ready() -> void:
+	update_coins_display()
+	for child in get_children():
+		if child.has_method("update_portal_indicators"):
+			child.update_portal_indicators()
+
 func update_coins_display() -> void:
-	if has_node("HUD/CoinLabel"):
-		$HUD/CoinLabel.text = str(GlobalScript.coins)
-	elif has_node("%CoinLabel"):
-		%CoinLabel.text = str(GlobalScript.coins)
-	else:
-		print("Still can't find it. Check the exact path in the Scene dock.")
+	var hud_node = find_child("HUD", true, false)
+	if hud_node and hud_node.has_method("update_coins_display"):
+		hud_node.update_coins_display()

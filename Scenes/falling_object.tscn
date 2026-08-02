@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://5cih5sw3cjc6"]
+
+[ext_resource type="Script" uid="uid://c3yi4wuxhq51n" path="res://Scripts/falling_object.gd" id="1_alosc"]
+[ext_resource type="Texture2D" uid="uid://beplptxilw10h" path="res://Assets/stone_packed.png" id="1_v05kg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_435oi"]
+size = Vector2(51, 52.5)
+
+[node name="FallingObject" type="RigidBody2D" unique_id=97368119]
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_alosc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=587551714]
+position = Vector2(0, 0)
+texture = ExtResource("1_v05kg")
+region_enabled = true
+region_rect = Rect2(54, 54.5, 55, 52.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884338606]
+position = Vector2(0, 0)
+shape = SubResource("RectangleShape2D_435oi")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
